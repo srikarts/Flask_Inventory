@@ -81,7 +81,7 @@
                             <input type="hidden" name="locname" value="{{d.loc_name}}"/>
                             {{lform.csrf_token()}}
                             {{lform.editlocname.label(class="form-control-label")}}<br>
-                            {{lform.editlocname.label(class="form-control form-control-lg",placeholder="{{d.loc_name}}")}}
+                            {{lform.editlocname.label(class="form-control form-control-lg",placeholder=d.loc_name)}}
 
                         </div>
                         <div class="modal-footer">
@@ -94,7 +94,6 @@
                 </div>
             </div>
             </div>
-        </div>
         <td>
             <a href="{{url_for('delete', p_id = d.loc_id, type='location')}}">
             <button type="button" class="btn btn-delete">
